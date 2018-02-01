@@ -1,19 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
-import { AngularFireAuth } from 'angularfire2/auth';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-blog',
+  templateUrl: './blog.component.html',
+  styleUrls: ['./blog.component.css']
 })
-export class HomeComponent implements OnInit {
+export class BlogComponent implements OnInit {
 
-  posts: Observable<any[]>;
-  constructor( private db: AngularFirestore ) {
+  posts: Observable<any[]>;  
+  constructor( private db:AngularFirestore ) {
     this.posts = db.collection('posts').valueChanges();
-  }
+   }
 
   ngOnInit() {
   }
