@@ -24,7 +24,10 @@
         ],
         "scripts": [
             "../node_modules/jquery/dist/jquery.min.js",
-            "../node_modules/bootstrap/dist/js/bootstrap.min.js"
+            "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+            "../src/assets/js/compatibility.js",
+            "../src/assets/js/objectdetect.js",
+            "../src/assets/js/objectdetect.handfist.js"            
         ],
         "environmentSource": "environments/environment.ts",
         "environments": {

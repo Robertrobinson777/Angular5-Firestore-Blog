@@ -10,7 +10,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="msapplication-starturl" content="/">
-    <meta name="theme-color" content="#f48c5b">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -18,11 +18,32 @@
 </head>
 
 <body>
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
     <app-root></app-root>
     <noscript>
       <!-- anchor linking to external file -->
       <a href="http://robertrobinson.in/">Enable JavaScript</a>
     </noscript>
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/service-worker.js')
+          .then((registration) => {
+            console.log('SW registered');
+          })
+          .catch((err) => {
+            console.log('SW error', err);
+          });
+        }
+      </script>
+
+      <script type="text/javascript" src="/assets/js/compatibility.js"></script>
+            <script type="text/javascript" src="/assets/js/objectdetect.handfist.js"></script>
+      <script type="text/javascript" src="/assets/js/objectdetect.js"></script>
+      <script type="text/javascript" src="/assets/js/scroll.js"></script>
+
 </body>
 
 </html>
